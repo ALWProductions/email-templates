@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	
+		<style type="text/css">            
+  			body {
+    			height: 100% !important;
+    			margin: 0 !important;
+    			padding: 0 !important;
+   				width: 100% !important; 
+  			}
+  			#MessageViewBody, #MessageWebViewDiv{
+  				width: 100% !important;
+  				display: block;
+ 		 		margin: 0 auto !important;
+  			}
+			div[style*="margin: 16px 0"] {
+    			margin: 0 !important;
+  			}
+  			div, button {
+    			display: block !important;
+  			}
+ 			table, td {
+    			border-collapse: collapse !important;
+    			mso-table-lspace: 0pt;
+    			mso-table-rspace: 0pt;
+  			}
+			table {
+				border-spacing: 0;
+			}
+  			img {
+    			outline: none;
+    			text-decoration: none;
+    			-ms-interpolation-mode: bicubic;
+  			}
+  			a {
+    			color: #5C233F;
+    			outline: none;
+    			text-decoration: underline;
+				font-weight: bold;
+  			}
+  			a[x-apple-data-detectors] {
+    			color: inherit !important;
+    			text-decoration: none !important;
+    			font-size: inherit !important;
+    			font-family: inherit !important;
+    			font-weight: inherit !important;
+    			line-height: inherit !important;
+  			}
+  			* {
+    			text-size-adjust: none;
+    			-webkit-text-size-adjust: none;
+    			-moz-text-size-adjust: none;
+    			-ms-text-size-adjust: none;
+    			-webkit-font-smoothing: antialiased;
+  			}
+			.emailButton {
+				font-family: 'open-sans', sans-serif; 
+				font-size: 16px; 
+				font-weight: bold; 
+				line-height: 120%; 
+				margin: 0; 
+				text-decoration: none; 
+				text-transform: uppercase; 
+				padding: 15px 30px;
+			}
+			.emailButton a {
+				color: #FFFFFF;
+				text-decoration: none; 
+				display: block;
+			}
+  			.ReadMsgBody, .ExternalClass {
+    			width: 100%;
+  			}
+  			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+    			line-height: 100%;
+  			}
+  			.gmail {
+    			display: none !important;
+    			width: 0 !important;
+  			}
+			.leftColumnContent{
+            	text-align: right;
+        	}
+			.rightColumnContent{
+            	text-align: left;
+        	}
+			.calloutLCol{
+            	text-align: center;
+        	}
+			.calloutRCol{
+            	text-align: left;
+        	}
+			.eNewBorder{
+				border: none;
+			}
+			.show-on-mobile {
+				display: none!important;
+			}
+			.hide-on-mobile {
+				display: block;
+			}
+			.footer-social-icons {
+				text-align: right;
+				padding-right: 25px; 
+			}
+			.footer-specific-logos {
+				text-align: right;
+				padding-right: 25px;
+			}
+			.line-break {
+				border-left: 1px solid #c5beb7;
+				height: 70px; 
+				margin: 25px 0px; 
+				position: absolute;
+			}
+			.interruptor {
+				max-height: 100px;
+				background-color:#5C233F; 
+				color: #ffffff; 
+				padding: 10px; 
+				width:100%
+			}
+			.image-flip {
+				background-image: url(https://i.imgur.com/BJ0fkuQ.png);
+				width: 518px;
+				height: 174px;
+			}
+			
+    		@media only screen and (max-width: 480px) {
+        		#templateColumns{
+            		width: 100% !important;
+        		}
+        		.templateColumnContainer{
+            		display: block !important;
+            		width: 100% !important;
+        		}
+             	.calloutcolumns {
+                	display: block !important;
+                	width: auto !important; 
+            	}
+        		.columnImage{
+            		height: auto !important;
+            		max-width: 480px !important;
+            		width: 100% !important;
+        		}
+        		.leftColumnContent{
+					text-align: center;
+        		}
+        		.rightColumnContent{
+          			text-align: center;
+        		}
+				.calloutLCol{
+					padding-top: 10px !important;
+					text-align: center !important;
+				}
+				.calloutRCol{
+            		text-align: center !important;
+					padding: 0 30px;
+        		}
+				.eNewBorder{
+					border: none !important;
+				}
+				*[class~=hide_on_mobile] {
+					display: none !important;
+				}
+				*[class~=show_on_mobile] {
+					display: block !important;
+					width: auto !important;
+					max-height: inherit !important;
+					overflow: visible !important;
+					float: none !important;
+				}
+				 *[class="hide"]{
+                	display: none !important;
+                    width: 0 !important;
+                    height: 0 !important;
+                    padding: 0 !important;
+                    font-size: 0 !important;
+                    line-height: 0 !important;
+                }
+                .header-mobile{
+                	line-height: 38px !important;
+                  	font-size: 40px !important;
+                }
+                .callout-mobile {
+                	font-size: 30px !important;
+				}
+				.flexibleContainer {
+					width: 100% !important;
+					max-width: none;
+					text-align: center;
+					margin-left: auto!important;
+					margin-right: auto!important;
+				}
+				.show-on-mobile {
+					display: block;
+				}
+				.hide-on-mobile {
+					display: none!important;
+				}
+				.mobile-button {
+					/*width: 100% !important; */
+					/*max-width: none !important;*/
+					text-align: center !important;
+					margin: auto !important;
+					/*padding-left: 25% !important;*/
+					/*padding-right: 25% !important;*/
+					/*display: block !important;*/
+				}
+				.footer-social-icons {
+					text-align: center !important;
+				}
+				.footer-specific-logos {
+					text-align: center !important;
+				}
+				.line-break {
+					border-bottom: 1px solid #c5beb7;
+					border-left: none;
+					height: 0px; 
+					width: 100px;
+					margin: 0px 118px 0px 118px; 
+					position: absolute;
+					text-align: center;
+				}
+				.responsive-footer-top {
+					padding: 30px 20px 10px 20px;
+					max-width: 300px;
+					text-align: center;
+				}
+				.responsive-footer-bottom {
+					padding: 10px 20px 10px 20px;
+					max-width: 300px;
+					text-align: center;
+				}
+				.image-flip {
+					background-image: url(https://i.imgur.com/ortRCuU.png);
+					width: 290px;
+					height: 355px;
+				}
+    		}
+		</style>
+		<style type="text/css">            
+  			@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    			.hidden {
+      				display: none !important;
+      				width: 0 !important;
+    			}
+	  			.header1 {
+		  			font-size: .8em;
+	 	 		}
+	  			.header2 {
+		  			font-size: .6em;
+	  			}
+    			.widthMobile {
+      				width: 100% !important;
+      				max-width: 480px !important;
+    			}
+    			.widthFull {
+      				width: 100% !important;
+    			}
+    			.photo {
+      				width: 100% !important;
+      				height: auto !important;
+    			}
+    			.button {
+      				width: 175px !important;
+    			}
+    			.icon {
+      				padding: 0 !important;
+    			}
+    			body {
+      				min-width: 100% !important;
+      				width: 100% !important;
+      				height: 100% !important;
+     				margin: 0 !important;
+      				padding: 0 !important;
+    			}
+    			.donatebutton {
+      				width: 100% !important;
+    			}
+  			}	
+		</style>
+	
+	<!--[if gte mso 9]><xml>
+   	<o:OfficeDocumentSettings>
+    <o:AllowPNG></o:AllowPNG>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+   	</o:OfficeDocumentSettings>
+  	</xml><![endif]-->
+	
+</head>
+
+
+<body style="margin: 0; padding: 0; width: 100% !important; background-color: #D1D3D4;">
+	<!-- trackingImage tag START -->
+	<!--[[trackingImage]]-->
+	<!-- trackingImage tag END -->
+	
+
+	
+<div align="center">
+	<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="widthMobile" style="max-width: 600px !important;" width="600">
+		<tbody><tr><td style="padding: 0 0 0 0;" align="center" valign="top">
+			<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr><td style="font-family: 'open-sans', san-serif; font-size: 33px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom">
+					<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody>
+							
+<!-- Visually Hidden Preheader Text : START -->
+	<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;" align="center">Pre-header text goes here.</div> 
+<!-- Visually Hidden Preheader Text : END -->
+
+<!--<p style="padding-top: 10px; font-family:  Arial, sans-serif, 'Lato' ; font-size:12px; color:#888888; line-height: 22px; text-align:center;"><a href="#" style="color:#888888; ">View In Browser</a></p>-->
+								
+<!-- Line Break START-->
+<tr><td height="10" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->
+												
+<!-- 1 Column - Logo Only START -->
+	<!-- <tr><td style="font-family: 'open-sans', sans-serif; font-size: 12px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom"><a href="#"><img alt="Community Action Services FB" border="0" src="https://files.constantcontact.com/4f07be38001/69d0cdce-4d08-45ae-8c8f-7755a9db57b8.png" width="200" /></a></td></tr> -->
+<!-- 1 Column - Logo Only END -->
+												
+<!-- 2 Column - Logo and Button START -->
+<tr><td align="center" valign="top">
+	<!-- Centering Table START -->
+	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign="top">
+		<!-- Flexible Container START -->
+		<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer"><tr><td valign="top" width="100%" style="padding: 0px 15px;">
+			<tr><td valign="top" width="100%" style="padding: 15px;">
+				<!-- Content Table START -->
+				<table role="presentation" align="Left" border="0" cellpadding="0" cellspacing="0" width="250" class="flexibleContainer"><tr><td valign="top" style="padding-bottom: 0px; padding-top:10px;">
+					<a href="#"><img src="https://files.constantcontact.com/04b896f6001/4c05294f-6dad-4de1-a4fb-75249371ccfa.png" width="200" class="photo" alt="Community Food Bank of Southern Arizona" style="max-width: 200px; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto;"></a>
+				</td></tr></table>
+				<!-- Content Table END -->
+				<!-- CTA Body START -->
+				<table role="presentation" align="Right" border="0" cellpadding="0" cellspacing="0" width="150" class="flexibleContainer"><tr><td valign="top" style="padding-top:10px;">
+					<!-- CTA Text START -->
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="111" height="47" class="emailButton mobile-button" style="border-collapse: separate; background-color: #F8AD3B; border-radius: 3px; cursor: auto;"><tr><td align="center" valign="middle" style="font-family: 'open-sans', sans-serif; font-size: 16px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: uppercase; padding: 15px 30px;">
+						<a href="#" target="_blank" style="color: #5C233F;text-decoration: none; display: block; min-width:67px;">Donate</a>
+					</td></tr></table>
+					<!-- CTA Text END -->
+				</td></tr></table>
+				<!-- CTA Body END -->
+			</td></tr>
+		</td></tr></table>
+		<!-- Flexible Container END -->
+	</td></tr></table>
+	<!-- Centering Table END -->
+</td></tr>								
+<!-- 2 Column - Logo and Button END -->
+												
+<!-- Line Break START -->
+<tr><td height="25" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->
+												
+<!-- Eyebrow START -->
+<!--<tr bgcolor="#ffffff"><td style="font-family: 'Open-sans', sans-serif; font-size: 12px; color: #000000; padding: 0px; margin: 0px;border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="" border="0" class="photo"   src="https://via.placeholder.com/600x50" style="display: block; margin: 0 auto; border:0;" width="100%" /></td></tr>--> 
+<!-- Eyebrow END -->
+								
+<!-- Header Image START -->
+<tr bgcolor="#ffffff"><td style="font-family: 'Open-sans', sans-serif; font-size: 12pt; color: #000000; padding: 0px; margin: 0px; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/600x420" style="display: block; margin: 0 auto; border: 0;" width="100%" /></td></tr>
+<!-- Header Image END -->
+												
+<!-- Line Break START -->
+<tr><td height="25" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->
+	
+<!-- Header Text START -->							
+<tr><td style="font-family: 'Open-sans', sans-serif; font-size: 33px; mso-line-height-rule: exactly; line-height: normal; color: #5C233F; padding: 0px 40px; font-weight: bold; text-align: center;" align="center" valign="top"><span class="header1"><!--<span class="eloquaemail">FirstName</span>-->Help families still recovering from the effects of COVID-19.</span></td></tr>
+<!-- Header Text END -->
+												
+<!-- Line Break START -->
+<tr><td height="25" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->
+												
+<!-- Full Width Button START -->
+<!--<tr><td style="margin:0 auto;font-family: 'Open-sans', sans-serif;  border-collapse: collapse; font-size: 10px; color: #ffffff; text-align: center; text-decoration: none; padding: 0" bgcolor="#ffffff">
+	<table role="presentation"  class=" " bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr><td style="font-family: 'Open-sans', sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 24px; color: #F5881F; padding: 0px 30px 0px 30px;" align="center" valign="top">
+			<table role="presentation"  width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+				<tr><td>
+					<table role="presentation"  align="center" border="0" cellspacing="0" cellpadding="0">
+						<tr><td><a href="#" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; background-color: #F5881F; border-top: 12px solid #F5881F; border-bottom: 12px solid #F5881F; border-right: 12px solid #F5881F; border-left: 12px solid #F5881F; display: inline-block; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 0px 20px;"><strong>DONATE</strong></a></td></tr>
+					</table>
+				</td></tr>
+			</table>
+		</td></tr></tbody>
+	</table>
+</td></tr>-->
+<!-- Full Width Button END -->
+												
+<tr><td style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 20px 30px;" align="left" valign="top"><span class="eloquaemail">First Name</span>, <br><br> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt ut labore</strong> et dolore magna aliquyam erat, sed diam voluptua. <br><br>At vero eos et accusam et justo <a href="#">duo dolores et ea rebum</a>. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br><br><strong>Vero eos et accusam et justo duo dolores et ea rebum.</strong> Stet clita kasd gubergren, no sea takimata sanctus est ipsum dolor sit amet.</td></tr>
+												
+<!-- Line Break START -->
+<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->											
+												
+<!-- Responsive Callout START -->
+<tr><td class="" style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #ffffff; padding: 0px 2% 0px 2%; background-color: #ffffff;" align="center" valign="middle">
+	<table style="width:100%;"><tr><td style=" background-color:#5C233F; color: #ffffff; padding: 10px; width:100%">
+		<table style="width: 100%;"><tr><td>
+			<table style="width: 100%;"><!--<tr><td class="calloutcolumns" align="center" style="padding: 20px;"><img alt="#" border="0" class=" " src="https://via.placeholder.com/100" style=" " width="100" /></td>-->
+                <td class="calloutcolumns" align="center" style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; padding: 15px 30px 15px 30px;">
+                    	<p style="font-size: 14pt; mso-line-height-rule: exactly; line-height: 22px; margin: 0px; padding: 1% 15%;; color: #ffffff;"><strong>Help promote a healthy, hunger-free southern Arizona.</strong></p>
+                        <p style="font-size: 9pt; mso-line-height-rule: exactly; line-height: 16px; margin:0px; padding: 1% 20%; color: #ffffff;">The gift you give today grows gardens, provides meals, and makes a healthy community.</p>
+				</td>
+			</table>
+			<table style="width: 100%;">
+                <td class="calloutcolumns" align="center" style="padding: 10px;">
+					<table style="border-collapse: separate; line-height: 100%;" border="0" cellspacing="0" cellpadding="0"><tbody>
+						<tr><td style="border: none; border-radius: 3px; cursor: auto; padding: 15px 30px; background: #F8AD3B;" align="center" valign="middle" bgcolor="#F8AD3B;"><a style="background: #F8AD3B;; color: #5C233F; font-family: 'open-sans', sans-serif; font-size: 16px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: uppercase; display: block;" href="#" target="_blank">DONATE</a></td></tr>
+					</tbody></table>
+				</td>
+			<!--</tr>--></table>
+		</td></tr></table>
+	</td></tr></table>
+</td></tr>										
+<!-- Responsive Callout END -->						
+											
+<!-- Desktop Static Callout START -->
+<!--<tr bgcolor="#ffffff"><td class="hide_on_mobile" style="font-family: 'Open-sans', sans-serif; font-size: 12pt; color: #000000; padding: 0px 5% 0px 5%; margin: 0px; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/550x200" style="display: block; margin: 0 auto; border: 0;" width="575" /></td></tr>-->
+<!-- Desktop Static Callout END -->
+
+<!-- Mobile Static Callout START -->
+<!--<tr bgcolor="#ffffff">--> <!-- [if !mso]><!--> <!--<td class="show_on_mobile" style="font-family: 'Open-sans', sans-serif; font-size: 12pt; color: #000000; padding: 0px 5% 0px 5%; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/275x350" style="display: block; margin: 0 auto; border: 0;" width="275" /></td> <!-- <![endif]--> <!--</tr>-->
+<!-- Mobile Static Callout END -->
+												
+<!-- Line Break START -->
+<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->
+												
+<tr><td style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 20px 30px;" align="left" valign="top">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br><br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <a href="#">Lorem ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <br><br><strong>At vero eos et accusam et justo duo dolores et ebum. Stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum dolor.</strong><br><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor <a href="#">invidunt ut labore et dolore</a> magna aliquyam erat, sed diam voluptua.<br><br>Gratefully,</td></tr>
+												
+<!-- Signature Signoff START -->
+<tr><td style="font-family: 'open-sans', sans-serif; font-size: 12px; padding: 0px 0px 0px 30px; 15px; margin-bottom: 0px; margin-top: 0px; border-spacing: 5px;" align="left" valign="bottom"><img alt="Signature Signoff" border="0" src="https://files.constantcontact.com/04b896f6001/e6272b06-9693-41a2-a459-d35d01696325.png" width="200" /></td></tr>	
+<!-- Signature Signoff END -->
+	
+<tr><td style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 20px 30px;" align="left" valign="top">Jane Doe<br>Title</td></tr>
+												
+<!-- Line Break START -->
+<tr><td height="25" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->
+												
+<!-- Full Width Button START -->
+<!--<tr><td style="margin:0 auto;font-family: 'Open-sans', sans-serif;  border-collapse: collapse; font-size: 10px; color: #ffffff; text-align: center; text-decoration: none; padding: 0" bgcolor="#ffffff">
+	<table role="presentation"  class=" " bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr><td style="font-family: 'Open-sans', sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 24px; color: #F5881F; padding: 0px 30px 0px 30px;" align="center" valign="top">
+			<table role="presentation"  width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+				<tr><td>
+					<table role="presentation"  align="center" border="0" cellspacing="0" cellpadding="0">
+						<tr><td><a href="#" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; background-color: #F5881F; border-top: 12px solid #F5881F; border-bottom: 12px solid #F5881F; border-right: 12px solid #F5881F; border-left: 12px solid #F5881F; display: inline-block; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 0px 20px;"><strong>DONATE</strong></a>
+						</td></tr>
+					</table>
+				</td></tr>
+			</table>
+		</td></tr></tbody>
+	</table>
+</td></tr>-->
+<!-- Full Width Button END -->
+												
+<!-- Footer START -->
+<table bgcolor="#ACA196" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr><td style="font-family: 'Open-sans', san-serif; font-size: 33px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom">
+		<table bgcolor="#ACA196" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+											
+<!-- Line Break START -->
+<tr><td height="5" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ACA196;">&nbsp;</td></tr>
+<!-- Line Break END-->	
+															
+<!-- 2 Column - Logo and Button START -->
+<tr><td align="center" valign="top">
+	<!-- Centering Table START -->
+	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign="top">
+		<!-- Flexible Container START -->
+		<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer"><tr><td valign="top" width="100%" style="padding: 5px;">
+			<tr><td valign="top" width="100%" style="padding: 5px;">
+			<!-- Content Table START -->
+			<table role="presentation" align="Left" border="0" cellpadding="0" cellspacing="0" width="250" class="flexibleContainer"><tr><td valign="top" style="padding-bottom: 0px; padding-top: 10px; padding-left: 20px;">
+				<a href="#"><img src="https://files.constantcontact.com/04b896f6001/2ad6b438-d550-486f-b7a1-3d4c193bf72d.png" width="226" class="photo" alt="Community FB of Southern Arizona" style="max-width: 200px; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto;"></a>
+			</td></tr></table>
+			<!-- Content Table END -->
+			<!-- CTA Body START -->
+			<table role="presentation" align="Right" border="0" cellpadding="0" cellspacing="0" width="150" class="flexibleContainer"><tr><td valign="top" style="padding-top:10px;">
+				<!-- CTA Text START -->
+				<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="111" height="47" class="emailButton mobile-button" style="border-collapse: separate; background-color: #F8AD3B; border-radius: 3px; cursor: auto;"><tr><td align="center" valign="middle" style="font-family: 'open-sans', sans-serif; font-size: 16px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: uppercase; padding: 15px 30px;">
+					<a href="#" target="_blank" style="color: #5C233F; text-decoration: none; display: block; min-width:67px;">Donate</a>
+				</td></tr></table>
+				<!-- CTA Text END -->
+			</td></tr></table>
+			<!-- CTA Body END -->
+			</td></tr>
+		</td></tr></table>
+		<!-- Flexible Container END -->
+	</td></tr></table>
+	<!-- Centering Table END -->
+</td></tr>								
+<!-- 2 Column - Logo and Button END -->					
+																		
+<!-- Line Break START -->
+<tr><td height="3" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ACA196;">&nbsp;</td></tr>
+<!-- Line Break END-->
+
+<!-- Location and About START -->
+<tr><td align="center" valign="top">					
+	<table role="presentation"  bgcolor="#ACA196" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody>
+			<tr><td style="font-family: 'open-sans', sans-serif; font-size: 24px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0; padding: 5px 0px 5px 0px;"  align="left" valign="bottom" bgcolor="#ACA196"><table table role="presentation"  bgcolor="#ACA196" border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumnsfooter1" >
+				<tbody>
+					<tr><td style="font-family: 'open-sans', sans-serif; font-size: 12px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0; padding: 5px 0px 5px 0px;" id="darker-tan-callout" align="left" valign="bottom" bgcolor="#ACA196"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumnsfooter2" >
+						<tr><td align="middle" valign="middle" width="90%" class="templateColumnContainer">
+							<table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="90%" height="20px" style="background-color: #a19589;">
+								<td align="left" valign="middle" width="48%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tr><td class="calloutLCol" style="font-family: Arial, sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 16px; color: #ffffff; padding: 5px 30px 20px 30px; text-align: left; font-size: 9pt;" align="left" valign="top"><strong>Community Food Bank, Inc.</strong><br>3003 S Country Club Rd<br>Tucson, AZ 85713<br>(520) 622-0525</td></tr>
+								</table></td>
+								<td class="line-break"></td>
+								<td align="right" valign="top" width="48%" class="templateColumnContainer responsive-footer-bottom"><table role="presentation"  border="0" cellpadding="5" cellspacing="0" width="100%">
+									<tr><td class="hide" width="0"></td>                            
+										<td class="calloutRCol" style="font-family: Arial, sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 16px; color: #ffffff; padding: 25px 20px 30px 10px; text-align: left;" align="left" valign="top">The Community Food Bank ensures that the people of Southern Arizona have access to the food and programs they need.</td>
+									</tr>
+								</table></td>
+							</table>
+						</td></tr>
+					</table></td></tr>
+				</tbody>
+			</table></td></tr>
+		</tbody>
+	</table>
+</td></tr>
+<!-- Location and About END -->				
+																		
+<!-- Line Break START -->						
+<tr><td height="3" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ACA196;">&nbsp;</td></tr>
+<!-- Line Break END-->
+
+<!-- Social Icons and Logos START -->				
+<tr><td align="center" valign="top">					
+	<table role="presentation"  bgcolor="#ACA196" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody>
+			<tr><td style="font-family: 'open-sans', sans-serif; font-size: 24px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0; padding: 0px 10px 0px 0px;"  align="left" valign="bottom" bgcolor="#ACA196"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumnsfooter3" >
+				<tr>
+					<td align="left" valign="middle" width="50%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" height="75px">
+						<tr><td class="calloutLCol" style="font-family: Arial, sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 20px; color: #ffffff; padding: 10px 30px 20px 30px; text-align: left;" align="left" valign="top"><strong>Connect With Us</strong><br>
+							<a href="#"><img src="https://files.constantcontact.com/04b896f6001/4dfc2c02-839b-43cd-87a0-4d325db7f988.png" alt="facebook" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/04b896f6001/da844a92-f78c-49fe-aaf6-74e82bd66984.png" alt="twitter" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/04b896f6001/d76b1a5b-4735-42e7-ae34-51bb83baa9ab.png" alt="instagram" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/04b896f6001/497f5b2f-0c97-4ee1-b782-be3132cbdced.png" alt="youtube" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/04b896f6001/8e49d577-cb68-4aff-a361-11faa5345f43.png" alt="linkedin" style="margin: 0 0px; padding: 0 0px;" /></a>
+						</td></tr>
+					</table></td>
+					<td align="center" valign="top" width="50%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="15" cellspacing="0" width="100%">
+						<tr><td class="hide" width="0"></td>                            
+							<td class="calloutRCol footer-specific-logos" style="margin-top: 0px;" valign="middle">
+								<img id="Feeding-America" alt="Feeding America Member" border="0" src="https://files.constantcontact.com/04b896f6001/dc2e9fe9-6faa-478c-8d0a-135059b2a543.png" width="62" height="32" style="padding-top: 10px; padding-right: 5%; width: auto;"/> <img id="Guide-Star" alt="GuideStar Platinum Participant" border="0" src="https://files.constantcontact.com/04b896f6001/d84e91fa-aa8b-49a5-94b4-a57184b22e56.png" width="43" height="32" style="padding-top: 10px; width: auto;"/> <img id="BBB-Accredited-Charity" alt="BBB Accredited Charity Logo" border="0" src="https://files.constantcontact.com/04b896f6001/2af2e639-d5cb-4215-be5b-6f6712252e42.png" width="69" height="26" style="padding-top: 10px; width: auto;"/>
+							</td> 
+						</tr>
+					</table></td>
+				</tr>
+			</table></td></tr>
+		</tbody>
+	</table>
+</td></tr>
+<!-- Social Icons and Logos END -->
+                    																				
+<!-- Line Break START -->						
+<tr><td height="3" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ACA196;">&nbsp;</td></tr>
+<!-- Line Break END-->
+
+<!-- Copyright and User Preferences START -->				
+<tr><td align="center" valign="top">
+	<table role="presentation"  bgcolor="#ACA196" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+		<tr><td style="font-family: 'open-sans', sans-serif; font-size: 24px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0; padding: 0px 0px 0px 0px;"  align="left" valign="bottom" bgcolor="#ACA196"><table role="presentation"  bgcolor="#87786B" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr><td style="font-family: 'open-sans', sans-serif; font-size: 24px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0; padding: 10px 30px 10px 30px;" id="dark-black-block" align="left" valign="bottom" bgcolor="#87786B"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumnsfooter4" >
+					<tr>
+						<td align="left" valign="middle" width="50%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" height="15px">
+							<tr><td class="calloutLCol" style="font-family: Arial, sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 20px; color: #ffffff; text-align: left;" align="left" valign="middle"><p>&#169; Community Food Bank, Inc.</p></td></tr>
+						</table></td>
+						<td align="right" valign="middle" width="50%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="5" cellspacing="0" width="100%" height="15px">
+							<tr><td class="hide" width="0"></td>                            
+								<td class="calloutRCol footer-update-unsubscirbe" style="margin-top: 0px; font-family: Arial, sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 20px; color: #ffffff; padding: 10px 30px 20px 30px; text-align: right;" align="right" valign="middle"><a href="#" style="color: #ffffff; padding-right: 2%;">Unsubscribe</a>  | <a href="#" style="color: #ffffff; padding-left: 2%;">Update Profile</a></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td></tr>
+			</tbody>
+		</table></td></tr>
+	</tbody></table>
+</td></tr>		
+<!-- Copyright and User Preferences END -->	
+				
+			</tbody>
+		</table>
+	</td></tr></tbody>
+</table>
+<!-- Footer END -->						
+												
+							</tbody>
+						</table>
+					</td></tr></tbody>
+				</table>	
+			</td></tr></tbody>	
+		</table>	
+	</div>
+	
+<!-- EOA Tracking Code START -->
+	
+<!-- EOA Tracking Code END -->
+	
+</body>
+</html>
