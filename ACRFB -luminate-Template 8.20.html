@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+    <meta name="x-apple-disable-message-reformatting">
+	
+	<!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+		<style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');</style>
+	
+		<style type="text/css"> 
+			[style*="Montserrat"] {
+				font-family: 'Montserrat', Arial, sans-serif !important;
+			}
+  			body {
+    			height: 100% !important;
+    			margin: 0 !important;
+    			padding: 0 !important;
+   				width: 100% !important; 
+				/*max-width: 600px;*/
+				-webkit-text-size-adjust: 100%;
+            	-ms-text-size-adjust: 100%;
+  			}
+  			#MessageViewBody, #MessageWebViewDiv{
+  				width: 100% !important;
+  				display: block;
+ 		 		margin: 0 auto !important;
+  			}
+			#MessageViewBody a {
+            	color: inherit !important;
+            	text-decoration: none !important;
+            	font-size: inherit !important;
+            	font-family: inherit !important;
+            	font-weight: inherit !important;
+            	line-height: inherit !important;
+			}
+			u + #body a {
+            	color: inherit !important;
+            	text-decoration: none !important;
+            	font-size: inherit !important;
+            	font-family: inherit !important;
+            	font-weight: inherit !important;
+            	line-height: inherit !important;
+			}
+			div[style*="margin: 16px 0"] {
+    			margin: 0 !important;
+  			}
+  			div, button {
+    			display: block !important;
+  			}
+ 			table, td {
+    			border-collapse: collapse !important;
+				border-spacing: 0 !important;
+    			mso-table-lspace: 0pt;
+    			mso-table-rspace: 0pt;
+				mso-line-height-rule: exactly !important;
+				-webkit-text-size-adjust: 100%;
+            	-ms-text-size-adjust: 100%;
+  			}
+			tr {
+				border-spacing: 0 !important;
+			 	mso-table-lspace: 0px !important; 
+			 	mso-table-rspace: 0pt !important; 
+			 	border-collapse: collapse !important; 
+			 	mso-line-height-rule: exactly !important;
+			}
+			table {
+				border-spacing: 0;
+				border-collapse: collapse !important;
+			}
+  			img {
+    			border: 0;
+            	height: auto;
+            	line-height: 100%;
+            	outline: none;
+            	text-decoration: none;
+    			-ms-interpolation-mode: bicubic;
+  			}
+  			a {
+    			color: #D0232B;
+    			outline: none;
+    			text-decoration: underline;
+				font-weight: bold;
+				-webkit-text-size-adjust: 100%;
+            	-ms-text-size-adjust: 100%;
+  			}
+			p {
+				-webkit-text-size-adjust: 100%;
+            	-ms-text-size-adjust: 100%;
+			}
+  			a[x-apple-data-detectors] {
+    			color: inherit !important;
+    			text-decoration: none !important;
+    			font-size: inherit !important;
+    			font-family: inherit !important;
+    			font-weight: inherit !important;
+    			line-height: inherit !important;
+  			}
+			[style*='Vag'] {
+            	font-family: 'Montserrat', Arial, sans-serif !important;
+            	font-weight: 400;
+            	font-style: normal; 
+        	}
+			#outlook a {
+            	padding: 0;
+        	}
+  			* {
+    			text-size-adjust: none;
+    			-webkit-text-size-adjust: none;
+    			-moz-text-size-adjust: none;
+    			-ms-text-size-adjust: none;
+    			-webkit-font-smoothing: antialiased;
+  			}
+			.emailButton {
+				font-family: 'Montserrat', Arial, sans-serif; 
+				font-size: 16px; 
+				font-weight: bold; 
+				line-height: 120%; 
+				margin: 0; 
+				text-decoration: none; 
+				text-transform: uppercase; 
+				padding: 15px 30px;
+			}
+			.emailButton a {
+				color: #FFFFFF;
+				text-decoration: none; 
+				display: block;
+			}
+			.mobile-link a, .mobile-link span { 
+			 	text-decoration:none !important; 
+			 	color: inherit !important;
+			 	border: none !important; 
+			}
+			h2.header {
+            	xfont-family: 'Montserrat', Arial, sans-serif !important;
+            	font-family: 'Montserrat', Arial, sans-serif !important;
+            	font-size: 34px; 
+            	line-height: 42px; 
+            	font-weight: bold; 
+            	color: #ffffff;
+				/*background-color: #7B4D20;*/
+        	}
+  			.ReadMsgBody, .ExternalClass {
+    			width: 100%;
+  			}
+			.ExternalClass * { 
+				line-height: 100%; 
+			}
+  			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+    			line-height: 100%;
+  			}
+  			.gmail {
+    			display: none !important;
+    			width: 0 !important;
+  			}
+			.leftColumnContent{
+            	text-align: right;
+        	}
+			.rightColumnContent{
+            	text-align: left;
+        	}
+			.calloutLCol{
+            	text-align: center;
+        	}
+			.calloutRCol{
+            	text-align: left;
+        	}
+			.eNewBorder{
+				border: none;
+			}
+			.show-on-mobile {
+				display: none!important;
+			}
+			.hide-on-mobile {
+				display: block;
+			}
+			.hide-on-desktop { 
+				display: none !important;
+			}
+			.footer-social-icons {
+				text-align: right;
+				padding-right: 25px; 
+			}
+			.footer-specific-logos {
+				text-align: right;
+				padding-right: 25px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				body { 
+					min-width: 320px; 
+					margin: 0; 
+				 }
+            	.hide-m { 
+					display: none !important; 
+				 }
+            	.show-for-small { 
+					display: block !important; 
+					overflow: visible !important; 
+					width: auto !important; 
+					max-height: inherit !important; 
+				 }
+            	.no-float { 
+					float: none !important; 
+				 }
+            	.block { 
+					display: block !important; 
+				 }
+            	.resize-image { 
+					width: 100%; 
+					height: auto; 
+				 }
+            	.center-image { 
+					display: block; 
+					margin: 0 auto; 
+				 }
+            	.text-center { 
+					text-align: center !important; 
+				 }
+            	.font-14 { 
+					font-size: 14px !important; 
+					line-height: 16px !important; 
+				 }
+            	.font-16 { 
+					font-size: 16px !important; 
+					line-height: 18px !important; 
+				 }
+            	.font-18 { 
+					font-size: 18px !important; 
+					line-height: 20px !important; 
+				 }
+            	.font-20 { 
+					font-size: 20px !important; 
+					line-height: 22px !important; 
+				 }
+            	.font-22 { 
+					font-size: 22px !important; 
+					line-height: 24px !important; 
+				 }
+            	.pad-t-0 { 
+					padding-top: 0px !important; 
+				 }
+            	.pad-r-0 { 
+					padding-right: 0px !important; 
+				 }
+            	.pad-b-0 { 
+					padding-bottom: 0px !important; 
+				 }
+            	.pad-l-0 { 
+					padding-left: 0px !important; 
+				 }
+            	.pad-t-20 { 
+					padding-top: 20px !important; 
+				 }
+            	.pad-r-20 { 
+					padding-right: 20px !important; 
+				 }
+            	.pad-b-20 { 
+					padding-bottom: 20px !important; 
+				 }
+            	.pad-l-20 { 
+					padding-left: 20px !important; 
+				 }
+            	.pad-0 { 
+					padding-top: 0px !important; 
+					padding-right: 0px !important; 
+					padding-bottom: 0px !important; 
+					padding-left: 0px !important; 
+				 }
+            	.pad-10 { 
+					padding-top: 10px !important; 
+					padding-right: 10px !important; 
+					padding-bottom: 10px !important; 
+					padding-left: 10px !important; 
+				 }
+            	.pad-20 { 
+					padding-top: 20px !important; 
+					padding-right: 20px !important; 
+					padding-bottom: 20px !important; 
+					padding-left: 20px !important; 
+				 }
+            	.pad-sides-0 { 
+					padding-right: 0px !important; 
+					padding-left: 0px !important; 
+				 }
+            	.pad-sides-10 { 
+					padding-right: 10px !important; 
+					padding-left: 10px !important; 
+				 }
+            	.pad-sides-20 { 
+					padding-right: 20px !important; 
+					padding-left: 20px !important; 
+				 }
+            	.pad-sides-30 { 
+					padding-right: 30px !important; 
+					padding-left: 30px !important; 
+				 }
+            	.w100 { 
+					width: 100% !important; 
+					min-width: initial !important; 
+				 }
+            	.w90 { 
+					width: 90% !important; 
+					min-width: initial !important; 
+				 }
+            	.w50 { 
+					width: 50% !important; 
+					min-width: initial !important; 
+				 }
+            	.tsm--mobile-full-width, .tsm--mobile-stack {
+               	 	width: 100% !important;
+                	padding: 0px !important;
+                	margin-top: 0px !important;
+                	margin-bottom: 0px !important;
+            	}           
+            	.tsm--mobile-stack {
+                	float: left !important;
+                	padding-bottom: 6px !important;
+            	}
+            	.tsm--stacked-centered {
+                	text-align: center !important;
+            	}
+            	td.tsm--header-logo-left {
+                	width: 100% !important;
+                	float: left !important;
+            	}
+            	td.tsm--header-logo-left img {
+                	margin: 0 auto !important;
+            	}            
+            	table.wrapper {
+                	width: 100% !important;
+            	}
+            	table.mobile-footer td {
+                	text-align: center !important;
+            	}
+            	table.mobile-footer .logo {
+                	margin: 0 auto !important;
+            	}
+            	td.mobile-image-pad {
+                	padding: 15px !important;
+            	}
+            	td.mobile-image-pad-sponsors {
+                	width: 90% !important;
+                	margin: 0 !important;
+                	padding: 0 20px 40px 20px !important;
+            	}
+            	td.mobile-title-pad {
+                	padding: 30px 10px 0px 10px !important;
+                	font-size: 30px !important;
+                	line-height: 36px !important;
+            	}			
+				td.mobile-title-pad-subline {
+                	padding: 10px 10px 30px 10px !important;
+                	font-size: 20px !important;
+                	line-height: 26px !important;
+            	}			
+			 	td.mobile-title-bullets {
+                	padding: 10px 10px 0px 10px !important;
+                	font-size: 20px !important;
+                	line-height: 26px !important;
+            	}
+            	td.mobile-text-pad {
+                	padding: 30px 10px 30px 10px !important;
+            	}
+            	td.mobile-column-right {
+                	padding-top: 20px !important;
+            	}
+            	img.fluid-image {
+                	width: 100% !important;
+                	height: auto !important;
+            	}
+            	td.hide {
+                	display: none !important;
+            	}
+            	td.mobile-button {
+                	padding: 12px 60px 12px 60px !important;
+            	}
+            	td.mobile-button a {
+                	font-size: 24px !important;
+            	}
+				td.logo {
+                	width: 100%;
+            	}
+				td.logo img {
+              		margin: 0 auto !important;
+            	}
+            	td.mobile-column-right {
+                	padding-top: 20px !important;
+            	}
+        	}
+    		@media only screen and (max-width: 480px) {
+				body {
+    				width: 100% !important;
+    				min-width: 100% !important;
+					max-width: 480px;
+					padding: 0 !important;
+					margin: 0 !important;
+				} 	
+				table[id="emailBody"], table[class="flexibleContainer"] {
+    				width: 100% !important;
+				}
+				img[class="flexibleImage"] {
+    				height: auto !important;
+    				width: 100% !important;
+				}
+				table[class="emailButton"] {
+    				width: 100% !important;
+				}
+				table[class="secondaryEmailButton"] {
+    				width: 100% !important;
+				}
+				td[class="buttonContent"] {
+    				padding: 0 !important;
+				}
+				td[class="buttonContent"] a {
+    				padding: 15px !important;
+				}
+				td[class="textContentLast"], td[class="imageContentLast"] {
+    				padding-top: 20px !important;
+				}
+				td[id="bodyCell"] {
+    				padding-top: 10px !important;
+    				padding-Right: 10px !important;
+    				padding-Left: 10px !important;
+				}
+				.tsm--mobile-stack {
+                	float: none !important;
+					width: 100%;
+                	padding-bottom: 6px !important;
+            	}
+    			.mobilenone {
+        			display: none;
+    			}
+    			.copyExtraPadding {
+    				padding: 10px 20px 40px;
+				}
+    			.spacerrow {
+					width:100% !important;
+				}
+        		#templateColumns{
+            		width: 100% !important;
+        		}
+        		.templateColumnContainer{
+            		display: block !important;
+            		width: 100% !important;
+        		}
+             	.calloutcolumns {
+                	display: block !important;
+                	width: auto !important; 
+            	}
+        		.columnImage{
+            		height: auto !important;
+            		max-width: 480px !important;
+            		width: 100% !important;
+        		}
+        		.leftColumnContent{
+					text-align: center;
+        		}
+        		.rightColumnContent{
+          			text-align: center;
+        		}
+				.calloutLCol{
+					padding-top: 10px !important;
+					text-align: center !important;
+				}
+				.calloutRCol{
+            		text-align: center !important;
+					padding: 0 30px;
+        		}
+				.eNewBorder{
+					border: none !important;
+				}
+				*[class~=hide_on_mobile] {
+					display: none !important;
+				}
+				*[class~=show_on_mobile] {
+					display: block !important;
+					width: auto !important;
+					max-height: inherit !important;
+					overflow: visible !important;
+					float: none !important;
+				}
+				 *[class="hide"]{
+                	display: none !important;
+                    width: 0 !important;
+                    height: 0 !important;
+                    padding: 0 !important;
+                    font-size: 0 !important;
+                    line-height: 0 !important;
+                }
+                .header-mobile{
+                	line-height: 38px !important;
+                  	font-size: 40px !important;
+                }
+                .callout-mobile {
+                	font-size: 30px !important;
+				}
+				.flexibleContainer {
+					width: 100% !important;
+					max-width: none;
+					text-align: center;
+					margin-left: auto!important;
+					margin-right: auto!important;
+				}
+				.show-on-mobile {
+					display: block;
+				}
+				.hide-on-mobile {
+					display: none!important;
+				}
+				.hide-on-desktop { 
+					display: block;
+				}
+				.mobile-button {
+					/*width: 100% !important; */
+					/*max-width: none !important;*/
+					text-align: center !important;
+					margin: auto !important;
+					/*padding-left: 25% !important;*/
+					/*padding-right: 25% !important;*/
+					/*display: block !important;*/
+				}
+				.footer-social-icons {
+					text-align: center !important;
+				}
+				.footer-specific-logos {
+					text-align: center !important;
+				}
+    		}
+		</style>
+		<style type="text/css">            
+  			@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    			.hidden {
+      				display: none !important;
+      				width: 0 !important;
+    			}
+	  			.header1 {
+		  			font-size: .8em;
+	 	 		}
+	  			.header2 {
+		  			font-size: .6em;
+	  			}
+    			.widthMobile {
+      				width: 100% !important;
+      				max-width: 480px !important;
+    			}
+    			.widthFull {
+      				width: 100% !important;
+    			}
+    			.photo {
+      				width: 100% !important;
+      				height: auto !important;
+    			}
+    			.button {
+      				width: 175px !important;
+    			}
+    			.icon {
+      				padding: 0 !important;
+    			}
+    			body {
+      				min-width: 100% !important;
+      				width: 100% !important;
+      				height: 100% !important;
+     				margin: 0 !important;
+      				padding: 0 !important;
+    			}
+    			.donatebutton {
+      				width: 100% !important;
+    			}
+				.mobile-imgs {
+					display: block;
+					width: auto !important;
+				}
+  			}	
+		</style>
+	
+	<!--[if gte mso 9]><xml>
+   	<o:OfficeDocumentSettings>
+    <o:AllowPNG></o:AllowPNG>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+   	</o:OfficeDocumentSettings>
+  	</xml><![endif]-->
+	
+</head>
+
+
+	
+	
+	
+<body style="margin: 0; padding: 0; width: 100% !important; background-color: #D1D3D4;">
+	<!-- trackingImage tag START -->
+	<!--[[trackingImage]]-->
+	<!-- trackingImage tag END -->
+	
+<div align="center">
+	<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="widthMobile" style="max-width: 600px !important;" width="600">
+		<tbody><tr><td style="padding: 0 0 0 0;" align="center" valign="top">
+			<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr><td style="font-family: 'Raleway', sans-serif; font-size: 33px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom">
+					<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody>
+							
+	<!-- PreHeader: START -->
+		<div style="display: none; font-size: 1px; color:#E8E5E5; line-height: 1px; font-family: sans-serif, Arial, 'Open Sans'; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;"> preheader text here!</div>
+		<!-- PreHeader: END -->
+		
+		<!-- View Message: START -->
+		<p style="padding-top: 10px; font-family: 'Raleway', Arial, sans-serif; font-size:12px; color:#888888; line-height: 22px; text-align:center;"><a href="http://[[S29:DOMAIN]]/site/MessageViewer" style="color:#888888; ">View this message as a web page.</a></p>					
+		<!-- View Message: END -->
+								
+			<!--<tr><td height="5" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>-->
+							
+			<!-- Liftnote: START -->
+			<!--<tr><td style="font-family: 'Raleway', sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 20px 30px;" align="left" valign="top">
+				Dear <convio:choose><convio:when title="Not empty" test="nempty" selected="selected"><convio:op><convio:session name="1" param="first_name"></convio:session></convio:op><convio:then><convio:session name="1" param="first_name"></convio:session></convio:then></convio:when><convio:otherwise title="Empty">Friend</convio:otherwise></convio:choose>,
+				<br><br> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt ut labore</strong> et dolore magna aliquyam erat, sed diam voluptua. 
+				<br><br>At vero eos et accusam et justo <a href="#" style="color: #22973F">duo dolores et ea rebum</a>. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				<br><br>&mdash; Stacy
+			</td></tr>-->
+			
+			<!--<tr><td height="5" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">
+				<hr style="width: 50%; text-align: center; margin-left: 0; border-top: 1px dashed; border-width: 0px; color: #b2b2b2; margin-left: auto; margin-right: auto;"> 
+			</td></tr>-->
+			<!-- Liftnote: End -->
+			
+			<tr><td height="5" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>	
+							
+			<!-- Logo and Button: START -->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" class="mobile-footer"><tr><td align="center" bgcolor="#ffffff" style="padding: 0;">
+    			<table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" bgcolor="#ffffff"><tr><td>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;"><tr><td style="padding-bottom: 5px;">
+            			<table border="0" cellpadding="0" cellspacing="0" width="45%" height="15px" align="left" valign="middle" class="wrapper"><tr><td>
+                			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%;"><tr><td class="mobile-image-pad mobile-text-pad" align="left" valign="middle" style="padding: 0px 30px 0px 30px; color: #ffffff; font-family: 'Raleway Medium', sans-serif; font-size: 12px; line-height: auto;">
+                				<a href="https://www.akroncantonfoodbank.org/"><img src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Akron-Canton-Regional-Foodbank-Logo_2C.png" width="auto" height="100" class="photo" alt="Akron-Canton Foodbank" style="max-width: 200px; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto;"></a>
+                			</td></tr></table>
+						</td></tr></table>
+                		<table border="0" cellpadding="0" cellspacing="0" width="45%" height="15px" align="right" valign="middle"  class="wrapper"><tr><td>
+                			<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="mobile-image-pad mobile-button" style="padding: 35px 30px 5px 30px; vertical-align: middle; display: block;" align="right">
+                    			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="130" class="emailButton mobile-button" style="border-collapse: separate; background-color: #D0232B; border-radius: 0px; cursor: auto;"><tr><td align="center" valign="middle" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: uppercase; padding: 15px 30px; ">
+									<a href="#" target="_blank" style="color: #FFFFFF; text-decoration: none; display: block;">Donate</a>
+								</td></tr></table>
+                			</td></tr></table>
+            			</td></tr></table>
+ 					</td></tr></table>
+				</td></tr></table>
+			</td></tr></table>	
+							
+			<!-- <tr><td style="font-family: 'Raleway', sans-serif; font-size: 12px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom"><a href="#"><img alt="Community Action Services FB" border="0" src="https://files.constantcontact.com/4f07be38001/69d0cdce-4d08-45ae-8c8f-7755a9db57b8.png" width="200" /></a></td></tr> -->				
+							
+			<!-- Logo and Button: End -->	
+							
+			<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+			
+			<!-- Eyebrow, Header Image, and Header Text: START -->
+			<!--<tr bgcolor="#ffffff"><td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #000000; padding: 0px; margin: 0px;border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="" border="0" class="photo"   src="https://via.placeholder.com/600x50" style="display: block; margin: 0 auto; border:0;" width="100%" /></td></tr>--> 
+			
+			<tr bgcolor="#ffffff"><td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; color: #000000; padding: 0px; margin: 0px; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" src="https://via.placeholder.com/600x420" style="display: block; margin: 0 auto; border: 0;" width="100%" /></td></tr>
+			
+			<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+			
+			<tr><td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 34px; mso-line-height-rule: exactly; line-height: normal; color: #827D00; background-color: #ffffff; padding: 0px 40px; font-weight: 400; text-align: center;" align="center" valign="top">
+				Help your Northeast Ohio neighbors get enough to eat. 
+				<br><strong>Every $1 = 4 meals.</strong>
+			</td></tr>	
+			<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+			<!-- Eyebrow, Header Image, and Header Text: END -->
+			
+			<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>				
+
+			<!-- Paragraph Text: START -->
+			<tr><td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 20px 30px;" align="left" valign="top">
+				Dear <convio:choose><convio:when title="Not empty" test="nempty" selected="selected"><convio:op><convio:session name="1" param="first_name"></convio:session></convio:op><convio:then><convio:session name="1" param="first_name"></convio:session></convio:then></convio:when><convio:otherwise title="Empty">Friend</convio:otherwise></convio:choose>,
+				<br><br> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt ut labore</strong> et dolore magna aliquyam erat, sed diam voluptua. 
+				<br><br>At vero eos et accusam et justo <a href="#" style="color: #D0232B">duo dolores et ea rebum</a>. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				<br><br><strong>Vero eos et accusam et justo duo dolores et ea rebum.</strong> Stet clita kasd gubergren, no sea takimata sanctus est ipsum dolor sit amet.
+			</td></tr>
+			<!-- Paragraph Text: END -->
+			
+			<!-- Responsive, Static or Button Callout: START -->
+				<tr><td class="" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #ffffff; padding: 0px 5% 0px 5%; background-color: #ffffff;" align="center" valign="middle">
+					<table style="width:100%;"><tr><td style=" background-color: #7B4D20; color: #ffffff; padding: 5px; width: 100%">
+						<table style="width: 100%;"><tr><td style="padding 10px;">
+							<table style="width: 100%;"><tr>
+								<td class="calloutcolumns" align="left"  style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; padding: 15px 20px; ">
+                    				<p style="font-size: 16px; font-weight: bold; mso-line-height-rule: exactly; line-height: 40px; margin: 0px; padding: 0px; color: #ffffff;">
+										<strong>Feed People. Fight Hunger.</strong>
+									</p>
+                        			<p style="font-size: 14px; font-weight: 300; mso-line-height-rule: exactly; line-height: 20px; margin: 0px; padding: 0px; color: #ffffff;">
+										The number of families and individuals who live in hunger in the United States is on the rise. Many come from our most vulnerable populations — children and seniors.
+									</p>
+									<p style="font-size: 16px; font-weight: bold; mso-line-height-rule: exactly; line-height: 40px; margin: 0px; padding: 0px; color: #ffffff;">
+										<a href="#" style="color: #ffffff;">LEARN MORE ›</a>
+									</p>
+                    			</td>
+								<td class="calloutcolumns" align="center" style="padding: 15px;">
+									<img alt="#" border="0" class=" " src="https://via.placeholder.com/140x140" style=" " width="150" />
+								</td>
+							</tr></table>
+						</td></tr></table>
+					</td></tr></table>
+				</td></tr>							
+			
+			<!-- Desktop Static Callout START -->
+			<!--<tr bgcolor="#ffffff"><td class="hide_on_mobile" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; color: #000000; padding: 0px 5% 0px 5%; margin: 0px; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/550x200" style="display: block; margin: 0 auto; border: 0;" width="575" /></td></tr>-->
+			<!-- Desktop Static Callout END -->
+
+			<!-- Mobile Static Callout START -->
+			<!--<tr bgcolor="#ffffff">--> <!-- [if !mso]><!--> <!--<td class="show_on_mobile" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; color: #000000; padding: 0px 5% 0px 5%; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/275x350" style="display: block; margin: 0 auto; border: 0;" width="275" /></td> <!-- <![endif]--> <!--</tr>-->
+			<!-- Mobile Static Callout END -->	
+							
+			<!-- Responsive, Static or Button Callout: END -->
+			
+			<!-- Paragraph Text: START -->
+			<tr><td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 10px 30px;" align="left" valign="top">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+				<br><br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <a href="#" style="color: #D0232B">Lorem ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+				<br><br><strong>At vero eos et accusam et justo duo dolores et ebum. Stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum dolor.</strong>
+				<br><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor <a href="#" style="color: #D0232B">invidunt ut labore et dolore</a> magna aliquyam erat, sed diam voluptua.
+				<br><br>Gratefully,
+			</td></tr>
+			<!-- Paragraph Text: END -->
+							
+			<!-- Signature and Signer: START -->
+			<tr><td style="font-family: 'Raleway', sans-serif; font-size: 12pt; mso-line-height-rule: auto; line-height: auto; color: #4A4A4A; padding: 10px 30px 20px 30px;" align="left" valign="top">
+				<img alt="Signature Signoff" border="0" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/dan-flowerts-sig.png" width="115" height="auto" />
+				<br>
+				Dan Flowers
+				<br>President &amp; CEO
+			</td></tr>
+			<!-- Signature and Signer: END -->		
+							
+			<tr><td height="35" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+												
+			<!-- Full Width Button START -->
+			<!--<tr><td style="margin: 0 auto; font-family: 'Montserrat', Arial, sans-serif;  border-collapse: collapse; font-size: 10px; color: #ffffff; text-align: center; text-decoration: none; padding: 0" bgcolor="#ffffff">
+				<table role="presentation"  class=" " bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody><tr><td style="font-family: 'Open-sans', sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 24px; color: #F5881F; padding: 0px 30px 0px 30px;" align="center" valign="top">
+						<table role="presentation"  width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+							<tr><td>
+								<table role="presentation"  align="center" border="0" cellspacing="0" cellpadding="0">
+									<tr><td><a href="#" target="_blank" style="font-size: 16px; font-family: 'Montserrat', Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; background-color: #F5881F; border-top: 12px solid #F5881F; border-bottom: 12px solid #F5881F; border-right: 12px solid #F5881F; border-left: 12px solid #F5881F; display: inline-block; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 0px 20px;"><strong>DONATE</strong></a>
+									</td></tr>
+								</table>
+							</td></tr>
+						</table>
+					</td></tr></tbody>
+				</table>
+			</td></tr>-->
+			<!-- Full Width Button END -->				
+							
+			<!-- Footer: START -->
+							
+				<!-- Desktop Static Footer Logo END -->				
+				<tr><td class="hide_on_mobile" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; color: #000000; padding: 0px 0px 0px 0px; margin: 0px; border-spacing: 0; text-align: center;" align="center" valign="top">
+					<a href="https://www.akroncantonfoodbank.org/"><img alt="Akron-Canton Foodbank Desktop Logo" border="0" class="photo" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Desktop-logo.png" style="display: block; margin: 0 auto; border: 0;" width="100%" /></a>
+				</td></tr>
+				<!-- Desktop Static Footer Logo END -->
+
+				<!-- Mobile Static Footer Logo START -->
+				<tr> <!-- [if !mso]><!--> <td class="show_on_mobile hide-on-desktop" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12pt; color: #000000; padding: 0px 0px 0px 0px; border-spacing: 0; text-align: center; z-index: -10px;" align="center" valign="top">
+					<a href="https://www.akroncantonfoodbank.org/"><img alt="Akron-Canton Foodbank Mobile Logo" border="0" class="photo" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/mobile-logo.png" style="display: block; margin: 0 auto; border: 0; background-color: #f3f2f2;" width="100%" /></a>
+				</td> <!-- <![endif]--> </tr>
+				<!-- Mobile Static Footer Logo END -->
+							
+				<tr><td height="5" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #F3F2F2;">&nbsp;</td></tr>
+							
+				<!-- Address, unsubscribe and Button: START -->
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" class="mobile-footer"><tr><td align="center" bgcolor="#F3F2F2" style="padding: 0;">
+    				<table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" bgcolor="#F3F2F2"><tr><td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F3F2F2;"><tr><td style="padding-bottom: 5px;">
+            				<table border="0" cellpadding="0" cellspacing="0" width="45%" height="15px" align="left" class="wrapper"><tr><td>
+                				<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%;"><tr><td align="center" style="padding: 30px 30px 40px 30px; color: #000000; font-family: 'Montserrat', Arial, sans-serif; font-weight: normal; font-size: 12px; line-height: 20px;" class="mobile-text-pad">
+                					350 Opportunity Parkway
+									<br>Akron, OH 44307-2234
+									<br>(330) 535-6900
+									<br><br> <a href="[[S38]]" style="color: #000000; font-family: 'Montserrat', Arial, sans-serif; font-weight: 400;">Unsubscribe</a> &nbsp; | &nbsp; <a href="#" style="color: #000000; font-family: 'Montserrat', Arial, sans-serif; font-weight: 400;">Update Profile</a>
+                				</td></tr></table>
+							</td></tr></table>
+                			<table border="0" cellpadding="0" cellspacing="0" width="45%" height="15px" align="right" class="wrapper"><tr><td>
+                				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="mobile-image-pad mobile-button" style="padding: 25px 30px 5px 30px;" align="center">
+                    				<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="130" class="emailButton mobile-button" style="border-collapse: separate; background-color: #D0232B; border-radius: 0px; cursor: auto;"><tr><td align="center" valign="middle" style="font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: uppercase; padding: 15px 30px;">
+										<a href="#" target="_blank" style="color: #FFFFFF; text-decoration: none; display: block;">Donate</a>
+									</td></tr></table>
+                				</td></tr></table>
+            				</td></tr></table>
+ 						</td></tr></table>
+					</td></tr></table>
+				</td></tr></table>
+				<!-- Address, unsubscribe and Button: END -->
+			
+				<!-- Affliate Logos: START -->
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" class="mobile-footer"><tr><td align="center" bgcolor="#F3F2F2" style="padding: 0;">
+    				<table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" bgcolor="#F3F2F2"><tr><td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F3F2F2;"><tr><td style="padding-bottom: 12px;">
+                			<table border="0" cellpadding="0" cellspacing="0" width="100%" align="right" class="wrapper"><tr><td>
+                				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="mobile-image-pad mobile-button" style="padding: 20px 30px 20px 0px;" align="center">
+                    				<img id="Feeding-America" alt="Member of Feeding America" border="0" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Image_23.png" width="57" height="49" style="padding-bottom: 5px; padding-right: 0px; font-size: 10px;"/> 
+									<img id="Ohio-Association-Foodbanks" alt="Ohio Association of Foodbanks" border="0" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Image_24.png" width="47" height="49" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; font-size: 10px;"/> 
+									<img id="North-Coast" alt="North Coast 99" border="0" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Image_25.png" width="66" height="50" style="padding-top: 5px; padding-bottom: 5px; padding-right: 5px; font-size: 10px;"/>
+									<img id="FA-Foodbank-Year" alt="Feeding America Foodbank of the Year" border="0" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Image_26.png" width="33" height="48" style="padding-top: 5px; padding-bottom: 5px; width: auto; font-size: 10px;"/>
+									<img id="BBB-Accredicted-Charity" alt="BBB Accredited Charity" border="0" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Image_27.png" width="72" height="49" style="padding-top: 5px; width: auto; font-size: 10px;"/>
+									<img id="Charity-Navigator-4-Star" alt="Charity Navigator 4 Star Charity" border="0" src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/Image_28.png" width="66" height="49" style="padding-top: 5px; width: auto; font-size: 10px;"/>
+                				</td></tr></table>
+            				</td></tr></table>
+ 						</td></tr></table>
+					</td></tr></table>
+				</td></tr></table>
+				<!-- Affliate Logos: END -->
+			
+				<!-- Copyright and Social Icons/Links: START -->
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" class="mobile-footer"><tr><td align="center" bgcolor="#827D00" style="padding: 0;">
+    				<table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" bgcolor="#827D00"><tr><td>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #827D00;"><tr><td style="padding-bottom: 5px;">
+            				<table border="0" cellpadding="0" cellspacing="0" width="45%" height="15px" align="left" valign="middle" class="wrapper"><tr><td>
+                				<table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%;"><tr><td align="left" style="padding: 5px 30px 5px 30px; color: #ffffff; font-family: 'Montserrat', Arial, sans-serif; font-size: 10px; line-height: 20px; white-space: nowrap;" class="mobile-text-pad">
+                					<p>&#169; <script>document.write(new Date().getFullYear())</script> Akron-Canton Regional Foodbank.</p>
+                				</td></tr></table>
+							</td></tr></table>
+                			<table border="0" cellpadding="0" cellspacing="0" width="45%" height="15px" align="right" valign="middle" class="wrapper"><tr><td>
+                				<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="mobile-image-pad mobile-button" style="padding: 15px 30px 5px 30px;" align="right">
+                    				<a href="https://www.facebook.com/akroncantonfoodbank"><img src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/facebook.png" alt="facebook" style="margin: 0 0px; padding: 0 0px;" /></a> &nbsp;
+									<a href="https://www.instagram.com/acrfoodbank"><img src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/instagram.png" alt="Instagram" style="margin: 0 0px; padding: 0 0px;" /></a> &nbsp;
+									<a href="https://twitter.com/ACRFoodbank"><img src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/twitter.png" alt="Twitter" style="margin: 0 0px; padding: 0 0px;" /></a> &nbsp;
+									<a href="https://www.youtube.com/user/acrfb/featured"><img src="http://give.akroncantonfoodbank.org/images/content/pagebuilder/youtube.png" alt="YouTube" style="margin: 0 0px; padding: 0 0px;" /></a> &nbsp;
+                				</td></tr></table>
+            				</td></tr></table>
+ 						</td></tr></table>
+					</td></tr></table>
+				</td></tr></table>
+				<!-- Copyright and Social Icons/Links: END -->
+			<!-- Footer: END -->		
+												
+							</tbody>
+						</table>
+					</td></tr></tbody>
+				</table>	
+			</td></tr></tbody>	
+		</table>	
+	</div>
+	
+<!-- EOA Tracking Code START -->
+	
+<!-- EOA Tracking Code END -->
+	
+</body>
+</html>
