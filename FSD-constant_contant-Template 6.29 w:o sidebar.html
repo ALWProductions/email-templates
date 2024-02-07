@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+		<style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');</style> 
+	
+		<style type="text/css">            
+  			body {
+    			height: 100% !important;
+    			margin: 0 !important;
+    			padding: 0 !important;
+   				width: 100% !important; 
+  			}
+  			#MessageViewBody, #MessageWebViewDiv{
+  				width: 100% !important;
+  				display: block;
+ 		 		margin: 0 auto !important;
+  			}
+			div[style*="margin: 16px 0"] {
+    			margin: 0 !important;
+  			}
+  			div, button {
+    			display: block !important;
+  			}
+ 			table, td {
+    			border-collapse: collapse !important;
+    			mso-table-lspace: 0pt;
+    			mso-table-rspace: 0pt;
+  			}
+			table {
+				border-spacing: 0;
+			}
+  			img {
+    			outline: none;
+    			text-decoration: none;
+    			-ms-interpolation-mode: bicubic;
+  			}
+  			a {
+    			color: #F5881F;
+    			outline: none;
+    			text-decoration: underline;
+				font-weight: bold;
+  			}
+  			a[x-apple-data-detectors] {
+    			color: inherit !important;
+    			text-decoration: none !important;
+    			font-size: inherit !important;
+    			font-family: inherit !important;
+    			font-weight: inherit !important;
+    			line-height: inherit !important;
+  			}
+  			* {
+    			text-size-adjust: none;
+    			-webkit-text-size-adjust: none;
+    			-moz-text-size-adjust: none;
+    			-ms-text-size-adjust: none;
+    			-webkit-font-smoothing: antialiased;
+  			}
+			.emailButton {
+				font-family: 'Montserrat', sans-serif; 
+				font-size: 16px; 
+				font-weight: bold; 
+				line-height: 120%; 
+				margin: 0; 
+				text-decoration: none; 
+				text-transform: uppercase; 
+				padding: 15px 30px;
+			}
+			.emailButton a {
+				color: #FFFFFF;
+				text-decoration: none; 
+				display: block;
+			}
+  			.ReadMsgBody, .ExternalClass {
+    			width: 100%;
+  			}
+  			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+    			line-height: 100%;
+  			}
+  			.gmail {
+    			display: none !important;
+    			width: 0 !important;
+  			}
+			.leftColumnContent{
+            	text-align: right;
+        	}
+			.rightColumnContent{
+            	text-align: left;
+        	}
+			.calloutLCol{
+            	text-align: center;
+        	}
+			.calloutRCol{
+            	text-align: left;
+        	}
+			.eNewBorder{
+				border: none;
+			}
+			.show-on-mobile {
+				display: none!important;
+			}
+			.hide-on-mobile {
+				display: block;
+			}
+			.footer-social-icons {
+				text-align: right;
+				padding-right: 25px; 
+			}
+			.footer-specific-logos {
+				text-align: right;
+				padding-right: 25px;
+			}
+	
+    		@media only screen and (max-width: 480px) {
+        		#templateColumns{
+            		width: 100% !important;
+        		}
+        		.templateColumnContainer{
+            		display: block !important;
+            		width: 100% !important;
+        		}
+             	.calloutcolumns {
+                	display: block !important;
+                	width: auto !important; 
+            	}
+        		.columnImage{
+            		height: auto !important;
+            		max-width: 480px !important;
+            		width: 100% !important;
+        		}
+        		.leftColumnContent{
+					text-align: center;
+        		}
+        		.rightColumnContent{
+          			text-align: center;
+        		}
+				.calloutLCol{
+					padding-top: 10px !important;
+					text-align: center !important;
+				}
+				.calloutRCol{
+            		text-align: center !important;
+					padding: 0 30px;
+        		}
+				.eNewBorder{
+					border: none !important;
+				}
+				*[class~=hide_on_mobile] {
+					display: none !important;
+				}
+				*[class~=show_on_mobile] {
+					display: block !important;
+					width: auto !important;
+					max-height: inherit !important;
+					overflow: visible !important;
+					float: none !important;
+				}
+				 *[class="hide"]{
+                	display: none !important;
+                    width: 0 !important;
+                    height: 0 !important;
+                    padding: 0 !important;
+                    font-size: 0 !important;
+                    line-height: 0 !important;
+                }
+                .header-mobile{
+                	line-height: 38px !important;
+                  	font-size: 40px !important;
+                }
+                .callout-mobile {
+                	font-size: 30px !important;
+				}
+				.flexibleContainer {
+					width: 100% !important;
+					max-width: none;
+					text-align: center;
+					margin-left: auto!important;
+					margin-right: auto!important;
+				}
+				.show-on-mobile {
+					display: block;
+				}
+				.hide-on-mobile {
+					display: none!important;
+				}
+				.mobile-button {
+					/*width: 100% !important; */
+					/*max-width: none !important;*/
+					text-align: center !important;
+					margin: auto !important;
+					/*padding-left: 25% !important;*/
+					/*padding-right: 25% !important;*/
+					/*display: block !important;*/
+				}
+				.footer-social-icons {
+					text-align: center !important;
+				}
+				.footer-specific-logos {
+					text-align: center !important;
+				}
+    		}
+		</style>
+		<style type="text/css">            
+  			@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    			.hidden {
+      				display: none !important;
+      				width: 0 !important;
+    			}
+	  			.header1 {
+		  			font-size: .8em;
+	 	 		}
+	  			.header2 {
+		  			font-size: .6em;
+	  			}
+    			.widthMobile {
+      				width: 100% !important;
+      				max-width: 480px !important;
+    			}
+    			.widthFull {
+      				width: 100% !important;
+    			}
+    			.photo {
+      				width: 100% !important;
+      				height: auto !important;
+    			}
+    			.button {
+      				width: 175px !important;
+    			}
+    			.icon {
+      				padding: 0 !important;
+    			}
+    			body {
+      				min-width: 100% !important;
+      				width: 100% !important;
+      				height: 100% !important;
+     				margin: 0 !important;
+      				padding: 0 !important;
+    			}
+    			.donatebutton {
+      				width: 100% !important;
+    			}
+				.mobile-imgs {
+					display: block;
+					width: auto !important;
+				}
+				.footer-btn {
+					padding-top: 10px !important;
+					padding-bottom: 10px !important;
+				}
+  			}	
+		</style>
+	
+		<!--[if mso]><!-->
+			<style type="text/css">
+				@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+					.mso-center {
+								text-align: center;
+							}
+				}
+			</style>
+		<!--<![endif]-->
+	
+	<!--[if gte mso 9]><xml>
+   	<o:OfficeDocumentSettings>
+    <o:AllowPNG></o:AllowPNG>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+   	</o:OfficeDocumentSettings>
+  	</xml><![endif]-->
+	
+	<!--[if mso 12]>
+		<style type="text/css">
+			.xxxflexibleContainer{display:block !important; width:100% !important;}
+		</style>
+	<![endif]-->
+	<!--[if mso 14]>
+		<style type="text/css">
+			.xxxflexibleContainer{display:block !important; width:100% !important;}
+		</style>
+	<![endif]-->
+	
+</head>
+	
+
+<body style="margin: 0; padding: 0; width: 100% !important; background-color: #D1D3D4;">
+	<!-- trackingImage tag START -->
+	<!--[[trackingImage]]-->
+	<!-- trackingImage tag END -->
+	
+	<div align="center">
+		<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="widthMobile" style="max-width: 600px !important;" width="600">
+			<tbody><tr><td style="padding: 0 0 0 0;" align="center" valign="top">
+				<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody><tr><td style="font-family: 'Montserrat', san-serif; font-size: 33px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom">
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+							
+	<!-- Visually Hidden Preheader Text : START -->
+		<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;" align="center">Pre-header text goes here.</div> 
+	<!-- Visually Hidden Preheader Text : END -->
+
+	<!--<p style="padding-top: 10px; font-family:  Arial, sans-serif, 'Lato' ; font-size:12px; color:#888888; line-height: 22px; text-align:center;"><a href="#" style="color:#888888; ">View In Browser</a></p>-->
+								
+	<!-- Line Break START-->
+		<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+	<!-- Line Break END-->
+								
+	<!-- Logo START -->												
+		<!-- 1 Column - Logo Only START -->
+		<!-- <tr><td style="font-family: 'Montserrat', sans-serif; font-size: 12px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom"><a href="#"><img alt="Feeding San Diego" border="0" src="https://files.constantcontact.com/0bf2129a001/2f0c8386-4fe2-48e0-b900-828fd84b16c9.png" width="200" /></a></td></tr> -->
+		<!-- 1 Column - Logo Only END -->
+												
+		<!-- 2 Column - Logo and Button START -->
+		<tr><td align="center" valign="top">
+			<!-- Centering Table START -->
+			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign="top">
+				<!-- Flexible Container START -->
+				<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer"><tr><td valign="top" width="100%" style="padding: 15px;">
+					<tr><td valign="top" width="100%" style="padding: 15px;">
+						<!-- Content Table START -->
+						<table role="presentation" align="Left" border="0" cellpadding="0" cellspacing="0" width="135" class="flexibleContainer"><tr><td valign="top" style="padding-bottom: 0px; padding-top:0px; padding-left: 15px;">
+							<a href="#"><img src="https://files.constantcontact.com/0bf2129a001/2f0c8386-4fe2-48e0-b900-828fd84b16c9.png" width="135" class="photo" alt="Feeding San Diego" style="max-width: 200px; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto;"></a>
+						</td></tr></table>
+						<!-- Content Table END -->
+						<!-- CTA Body START -->
+						<table role="presentation" align="Right" border="0" cellpadding="0" cellspacing="0" width="100" class="flexibleContainer"><tr><td valign="top" style="padding-top: 10px; padding-right: 25px;">
+							<!-- CTA Text START -->
+							<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="200" class="emailButton mobile-button" style="border-collapse: separate; background-color: #DE7C00; border-radius: 15px 0px 15px 0px;  cursor: auto;">
+								<tr><td align="center" valign="middle" style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: none; padding: 15px 25px;">
+									<a href="https://give.feedingsandiego.org/give/339835/#!/donation/checkout?s_src=DOL21J1A01_01EMAIL&utm_source=tsm&utm_medium=email&utm_campaign=fy22octaff" target="_blank" style="color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: bolder; letter-spacing: normal; display: block; white-space: nowrap; text-transform: uppercase;">Give Now</a>
+								</td></tr>
+							</table>
+							<!-- CTA Text END -->
+						</td></tr></table>
+						<!-- CTA Body END -->
+					</td></tr>
+				</td></tr></table>
+				<!-- Flexible Container END -->
+			</td></tr></table>
+			<!-- Centering Table END -->
+		</td></tr>								
+		<!-- 2 Column - Logo and Button END -->
+	<!-- Logo END -->								
+	
+	<!-- Line Break START -->
+		<tr><td height="25" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+	<!-- Line Break END-->
+												
+	<!-- Eyebrow START -->
+		<!--<tr bgcolor="#ffffff"><td style="font-family: 'Montserrat', sans-serif; font-size: 12px; color: #000000; padding: 0px; margin: 0px;border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="" border="0" class="photo"   src="https://via.placeholder.com/600x50" style="display: block; margin: 0 auto; border:0;" width="100%" /></td></tr>--> 
+	<!-- Eyebrow END -->
+								
+	<!-- Header Image START -->
+		<tr bgcolor="#ffffff"><td style="font-family: 'Montserrat', sans-serif; font-size: 12pt; color: #000000; padding: 0px; margin: 0px; border-spacing: 0; text-align: center;" align="center" valign="top"><a href="#" target="_blank"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/600x420" style="display: block; margin: 0 auto; border: 0;" width="100%" /></a></td></tr>
+	<!-- Header Image END -->
+												
+	<!-- Line Break START -->
+		<tr><td height="35" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+	<!-- Line Break END-->
+		
+	<!-- Header Text START -->							
+		<tr><td style="font-family: 'Montserrat', sans-serif; font-size: 32px; mso-line-height-rule: exactly; line-height: normal; color: #005487; padding: 0px 40px; font-weight: bold; text-align: center;" align="center" valign="top"><span class="header1"><!--<span class="eloquaemail">FirstName</span>-->Help families still recovering from the effects of COVID-19.</span></td></tr>
+	<!-- Header Text END -->
+								
+	<!-- Header Text Image START -->							
+		<!--<tr><td style="font-family: 'Montserrat', sans-serif; font-size: 26px; mso-line-height-rule: exactly; line-height: normal; color: #213165; padding: 0px 35px; font-weight: bold; text-align: center;" align="center" valign="top"><a href="#" target="_blank"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/600x420" style="display: block; margin: 0 auto; border: 0;" width="100%" /></a></td></tr>-->
+	<!-- Header Text Image END -->							
+								
+	<!-- Line Break START -->
+		<tr><td height="35" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+	<!-- Line Break END-->
+								
+	<!-- Full Width Button START -->
+		<!--<tr><td style="margin:0 auto;font-family: 'Montserrat', sans-serif;  border-collapse: collapse; font-size: 10px; color: #ffffff; text-align: center; text-decoration: none; padding: 0" bgcolor="#ffffff">
+			<table role="presentation"  class=" " bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr><td style="font-family: 'Montserrat', sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 24px; color: #F5881F; padding: 0px 30px 0px 30px;" align="center" valign="top">
+					<table role="presentation"  width="100%" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td>
+						<table role="presentation"  align="center" border="0" cellspacing="0" cellpadding="0">
+							<tr><td><a href="#" target="_blank" style="font-size: 16px; font-family: 'Montserrat', sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; background-color: #F5881F; border-top: 12px solid #F5881F; border-bottom: 12px solid #F5881F; border-right: 12px solid #F5881F; border-left: 12px solid #F5881F; display: inline-block; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 0px 20px;"><strong>DONATE</strong></a></td></tr>
+						</table>
+					</td></tr></table>
+				</td></tr></tbody>
+			</table>
+		</td></tr>-->
+	<!-- Full Width Button END -->							
+								
+	<tr><td style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 0px 30px;" align="left" valign="top">Dear [[FIRSTNAME or "Friend"]], 
+		<br><br> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <strong>tempor invidunt ut labore</strong> et dolore magna aliquyam erat, sed diam voluptua. 
+	</td></tr>
+											
+<!-- Desktop Static Callout START -->
+	<tr bgcolor="#ffffff"><td class="hide_on_mobile" style="font-family: 'Montserrat', sans-serif; font-size: 12pt; color: #000000; padding: 0px 2% 0px 2%; margin: 0px; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/550x200" style="display: block; margin: 0 auto; border: 0;" width="575" /></td></tr>
+<!-- Desktop Static Callout END -->
+
+<!-- Mobile Static Callout START -->
+	<tr bgcolor="#ffffff"> <!-- [if !mso]><!--> <td class="show_on_mobile" style="font-family: 'Montserrat', sans-serif; font-size: 12pt; color: #000000; padding: 0px 5% 0px 5%; border-spacing: 0; text-align: center;" align="center" valign="top"><img alt="#" border="0" class="photo" src="https://via.placeholder.com/275x350" style="display: block; margin: 0 auto; border: 0;" width="275" /></td> <!-- <![endif]--> </tr>
+<!-- Mobile Static Callout END -->															
+												
+	<tr><td style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 0px 30px 20px 30px;" align="left" valign="top">
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+		<br><br>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <a href="#">Lorem ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+		<br><br><strong>At vero eos et accusam et justo duo dolores et ebum. Stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum dolor.</strong>
+		<br><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor <a href="#">invidunt ut labore et dolore</a> magna aliquyam erat, sed diam voluptua.
+		<br><br>Gratefully,
+	</td></tr>
+												
+<!-- Signature Signoff START -->
+	<tr><td style="font-family: 'Montserrat', sans-serif; font-size: 12px; padding: 0px 0px 0px 30px; 15px; margin-bottom: 0px; margin-top: 0px; border-spacing: 5px;" align="left" valign="bottom"><img alt="Signature Signoff" border="0" src="https://files.constantcontact.com/4f07be38001/d0f175cf-a4dc-48ff-86b6-7eb516cb7783.png" width="200" /></td></tr>	
+<!-- Signature Signoff END -->
+	
+	<tr><td style="font-family: Arial, sans-serif; font-size: 12pt; mso-line-height-rule: exactly; line-height: 22px; color: #4A4A4A; padding: 10px 30px 20px 30px;" align="left" valign="top">Jane Doe<br>Title</td></tr>								
+												
+<!-- Line Break START -->
+	<tr><td height="35" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #ffffff;">&nbsp;</td></tr>
+<!-- Line Break END-->
+												
+<!-- Full Width Button START -->
+	<!--<tr><td style="margin:0 auto;font-family: 'Montserrat', sans-serif;  border-collapse: collapse; font-size: 10px; color: #ffffff; text-align: center; text-decoration: none; padding: 0" bgcolor="#ffffff">
+		<table role="presentation"  class=" " bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr><td style="font-family: 'Montserrat', sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 24px; color: #F5881F; padding: 0px 30px 0px 30px;" align="center" valign="top">
+				<table role="presentation"  width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+					<tr><td>
+						<table role="presentation"  align="center" border="0" cellspacing="0" cellpadding="0">
+							<tr><td><a href="#" target="_blank" style="font-size: 16px; font-family: 'Montserrat', sans-serif; color: #ffffff; text-decoration: none; border-radius: 3px; background-color: #F5881F; border-top: 12px solid #F5881F; border-bottom: 12px solid #F5881F; border-right: 12px solid #F5881F; border-left: 12px solid #F5881F; display: inline-block; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 0px 20px;"><strong>DONATE</strong></a>
+							</td></tr>
+						</table>
+					</td></tr>
+				</table>
+			</td></tr></tbody>
+		</table>
+	</td></tr>-->
+<!-- Full Width Button END -->
+	
+				
+<!-- Footer START -->
+	<table bgcolor="#F8F7F3" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #005487!important;">
+		<tbody>
+			<tr><td style="font-family: 'Montserrat', san-serif; font-size: 33px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom">
+			<table bgcolor="#005487" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+											
+	<!-- Line Break START -->
+		<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #005487;">&nbsp;</td></tr>
+	<!-- Line Break END-->				
+					
+	<!-- Logo START -->												
+		<!-- 1 Column - Logo Only START -->
+		<tr><td style="font-family: 'Montserrat', sans-serif; font-size: 12px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;" align="center" valign="bottom"><a href="#"><img alt="Feeding San Diego" border="0" src="https://files.constantcontact.com/0bf2129a001/39242603-13c3-438a-85a2-e01e6fdb2eaa.png" width="110" /></a></td></tr>
+		<!-- 1 Column - Logo Only END -->											
+	<!-- Logo END -->					
+	
+	<!-- Line Break START -->
+		<tr><td height="20" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #005487;">&nbsp;</td></tr>
+	<!-- Line Break END-->	
+					
+	<!-- Full Width Button START -->
+		<tr><td style="margin:0 auto;font-family: 'Montserrat', sans-serif;  border-collapse: collapse; font-size: 10px; color: #005487; text-align: center; text-decoration: none; padding: 0" bgcolor="#005487">
+			<table role="presentation"  class=" " bgcolor="#005487" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr><td style="font-family: 'Montserrat', sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 24px; color: #F5881F; padding: 0px 30px 0px 30px;" align="center" valign="top">
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="210" class="emailButton mobile-button" style="border-collapse: separate; background-color: #DE7C00; border-radius: 15px 0px 15px 0px;  cursor: auto;">
+						<tr><td align="center" valign="middle" style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: none; padding: 15px 25px;">
+							<a href="https://give.feedingsandiego.org/give/339835/#!/donation/checkout?s_src=DOL21J1A01_01EMAIL&utm_source=tsm&utm_medium=email&utm_campaign=fy22octaff" target="_blank" style="color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: bolder; letter-spacing: normal; display: block; white-space: nowrap; text-transform: uppercase;">Give Now</a>
+					</td></tr></table>
+				</td></tr></tbody>
+			</table>
+		</td></tr>
+	<!-- Full Width Button END -->				
+	
+	<!-- Line Break START -->
+		<tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #005487;">&nbsp;</td></tr>
+	<!-- Line Break END-->								
+							
+<!-- Information, Unsub/Profile, and Logos START -->
+<tr><td align="center" valign="top"><table role="presentation"  bgcolor="#005487" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr><td style="font-family: 'Montserrat', sans-serif; font-size: 24px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0;"  align="left" valign="bottom" bgcolor="#005487"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumnsfooter1" >
+			<tr>
+				<td align="center" valign="middle" width="100%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" height="75px">
+					<tr><td class="calloutLCol" style="font-family: 'Montserrat', sans-serif; font-size: 12px; mso-line-height-rule: exactly; line-height: 20px; color: #ffffff; padding: 10px 30px 0px 30px; text-align: center;" align="center" valign="top">9477 Waples Street, <br>Ste 100 <br>San Diego, CA 92121
+						<br><br> 
+						<a href="#" style="color: #ffffff;">Unsubscribe</a>  | <a href="#" style="color: #ffffff;">Update Profile</a>
+					</td></tr>
+				</table></td>
+			</tr>
+<!-- Line Break START -->
+	<tr><td height="0" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #005487;">&nbsp;</td></tr>
+<!-- Line Break END-->
+			<tr>
+				<td align="center" valign="top" width="100%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%"><tbody>
+					<tr><td width="100%" align="center" class="footer-specific-logos" style="margin-top:0px; text-align: center;" valign="middle">
+						<img align="center" id="1fortheplanet" alt="1% for the Planet" border="0" src="https://files.constantcontact.com/0bf2129a001/986ecb4e-4f74-4b9f-b58b-17169d47f147.png" width="95" height="40" style="padding-bottom: 0px; width: auto; text-align:right;"/> 
+						<span >&nbsp;&nbsp;</span>
+						<img align="center" id="charity-navigator" alt="Charity Navigator" border="0" src="https://files.constantcontact.com/0bf2129a001/7781aa5d-2298-4a1e-a580-e39e85b008da.png" width="93" height="46" style="padding-top: 10px; padding-bottom: 10px; width: auto; text-align:left;"/>
+						<span >&nbsp;&nbsp;</span>
+						<img align="center" id="Feeding-America" alt="Feeding America Member" border="0" src="https://files.constantcontact.com/0bf2129a001/3959cc0a-5d52-4762-bcd4-51bf4dca8f19.png" width="93" height="46" style="padding-top: 10px; padding-bottom: 10px; width: auto; text-align:left;"/>
+					</td></tr>
+				</tbody></table></td>			
+			</tr>
+		</table></td></tr>
+	</tbody>
+</table></td></tr>					
+<!-- Information, Unsub/Profile, and Logos END -->					
+	
+<!-- Line Break START -->						
+	<!-- <tr><td height="15" style="font-size: 1px; line-height: 15px; mso-line-height-rule: exactly; background-color: #F8F7F3;">&nbsp;</td></tr> -->
+<!-- Line Break END-->	
+
+<!-- Copyright and Social Icons START -->
+<tr><td align="center" valign="top"><table role="presentation"  bgcolor="#005487" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr><td style="font-family: 'Montserrat', sans-serif; font-size: 24px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0; padding: 15px 0px 0px 0px;"  align="left" valign="bottom" bgcolor="#005487"><table role="presentation"  bgcolor="#005487" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<tr><td style="font-family: Montserrat, sans-serif; font-size: 24px; padding-bottom: 0px; margin-bottom: 0px; border-spacing: 0; padding: 0px;" id="dark-black-block" align="left" valign="bottom" bgcolor="#ffffff"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumnsfooter3" >
+					<tr>
+						<td align="left" valign="middle" width="50%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="0" cellspacing="0" width="100%" height="15px">
+							<tr><td class="calloutLCol" style="font-family: Arial, sans-serif; font-size: 10px; mso-line-height-rule: exactly; line-height: 20px; color: #ABABAB; padding: 0px 30px 0px 30px; text-align: left;" align="left" valign="middle"><p>&#169; 2021 <!--<script>document.write(new Date().getFullYear())</script>-->Feeding San Diego</p></td></tr>
+						</table></td>
+						<td align="right" valign="middle" width="50%" class="templateColumnContainer"><table role="presentation"  border="0" cellpadding="5" cellspacing="0" width="100%" height="15px">
+							<tr><td class="hide" width="0"></td>                            
+								<td class="calloutRCol footer-social-icons" style="margin-top: 0px; padding: 0px 30px 0px 30px;" align="right" valign="middle">
+									<a href="#"><img src="https://files.constantcontact.com/0bf2129a001/4aeec219-a916-44bd-8f0a-29fd8f6dc19b.png" alt="facebook" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/0bf2129a001/a0a679a0-eb44-4cd2-b09d-0fb230c1bfab.png" alt="youtube" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/0bf2129a001/cbfbaace-4be4-4e6c-9fee-c7c440e01874.png" alt="twitter" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/0bf2129a001/0ad87da3-405f-4756-aa71-c8abe9324dee.png" alt="instagram" style="margin: 0 0px; padding: 0 0px;" /></a> <a href="#"><img src="https://files.constantcontact.com/0bf2129a001/ea5bd278-d40b-4f64-a26f-8ba04ea5946d.png" alt="linkedin" style="margin: 0 0px; padding: 0 0px;" /></a>
+								</td>
+							</tr>
+						</table></td>	
+					</tr>
+				</table></td></tr>
+			</tbody>
+		</table></td></tr>
+	</tbody>
+</table></td></tr>		
+<!-- Copyright and Social Icons START -->					
+
+							
+			</tbody>
+		</table>
+	</td></tr></tbody>
+</table>
+<!-- Footer END -->		
+						
+							</tbody>	
+						</table>		
+					</td></tr></tbody>					
+				</table>					
+			</td></tr></tbody>					
+		</table>
+	</div>
+</body>	
+</html>	
